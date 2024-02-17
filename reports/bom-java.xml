@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.2" serialNumber="urn:uuid:75b84446-213f-49e4-bef2-f2b046e01ba9" version="1">
+  <externalReferences>
+    <reference type="other">
+      <url>/app</url>
+      <comment>Base path</comment>
+    </reference>
+    <reference type="other">
+      <url>/app/pom.xml</url>
+      <comment>Package file</comment>
+    </reference>
+  </externalReferences>
+  <metadata>
+    <timestamp>2020-12-24T11:19:50.188Z</timestamp>
+    <tools>
+      <tool>
+        <vendor>AppThreat</vendor>
+        <name>cdxgen</name>
+        <version>2.1.0</version>
+      </tool>
+    </tools>
+    <authors>
+      <author>
+        <name>
+          <name>Team AppThreat</name>
+        </name>
+        <email>cloud@appthreat.com</email>
+      </author>
+    </authors>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:maven/org.apache.commons/commons-exec@1.3?type=jar">
+      <group>org.apache.commons</group>
+      <name>commons-exec</name>
+      <version>1.3</version>
+      <purl>pkg:maven/org.apache.commons/commons-exec@1.3?type=jar</purl>
+      <externalReferences>
+        <reference type="vcs">
+          <url>http://svn.apache.org/viewvc/commons/proper/exec/trunk</url>
+        </reference>
+      </externalReferences>
+      <description>
+        <![CDATA[Apache Commons Exec is a library to reliably execute external processes from within the JVM.]]>
+      </description>
+    </component>
+  </components>
+</bom>

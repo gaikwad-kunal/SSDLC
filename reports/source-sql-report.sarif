@@ -1,0 +1,85 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SQL Source Analyzer",
+          "version": "1.0.0-scan",
+          "fullName": "SQL Source Analyzer"
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "/opt/pmd-bin/bin/run.sh",
+            "pmd",
+            "-no-cache",
+            "--failOnViolation",
+            "false",
+            "-language",
+            "plsql",
+            "-d",
+            "/app",
+            "-r",
+            "/app/reports/source-sql-report.csv",
+            "-f",
+            "csv",
+            "-R",
+            "/usr/local/src/lib/../rules-pmd.xml"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "/opt/pmd-bin/bin/run.sh pmd -no-cache --failOnViolation false -language plsql -d /app -r /app/reports/source-sql-report.csv -f csv -R /usr/local/src/lib/../rules-pmd.xml",
+          "endTimeUtc": "2020-12-24T11:14:51Z",
+          "workingDirectory": {
+            "uri": "file:///webgoat/WebGoat"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2020-12-24T11:14:51Z",
+          "workingDirectory": {
+            "uri": "file:///webgoat/WebGoat"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 0,
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "results": [],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "ea081f37-b1c9-444d-9c0e-4fa9fd0bf445"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "develop",
+          "repositoryUri": "https://github.com/WebGoat/WebGoat",
+          "revisionId": "60c7fdd0dbcbc09aaa22f5c772666c716344f8cf"
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "ea081f37-b1c9-444d-9c0e-4fa9fd0bf445",
+      "runGuid": "e91e98b6-840b-41ae-94b9-65279efa5750"
+    }
+  ]
+}

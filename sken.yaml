@@ -1,0 +1,12 @@
+orgid: cd467764-9975-4b80-aaeb-a0cc9848c62d
+appid: c1f8ce7a-cf74-4a56-904e-f47856d5c46b
+
+# optional Param section start
+buildtool: jenkins # optional param, values=jenkins|travis
+
+variables:
+  DAST_URL: http://192.168.0.108/WebGoat/login # optional param 
+  DAST_FULL_SCAN: true #true|false
+
+# optional Param section end
+# end of file

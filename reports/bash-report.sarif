@@ -1,0 +1,309 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Shell Script Analysis",
+          "rules": [
+            {
+              "id": "1068",
+              "help": {
+                "text": "Don't put spaces around the = in assignments (or quote to make it literal).",
+                "markdown": "Don't put spaces around the = in assignments (or quote to make it literal)."
+              },
+              "name": "",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "Don't put spaces around the = in assignments (or quote to make it literal)."
+              },
+              "helpUri": "https://github.com/koalaman/shellcheck/wiki/SC1068",
+              "shortDescription": {
+                "text": "Don't put spaces around the = in assignments (or quote to make it literal)."
+              }
+            },
+            {
+              "id": "2242",
+              "help": {
+                "text": "Can only exit with status 0-255. Other data should be written to stdout/stderr.",
+                "markdown": "Can only exit with status 0-255. Other data should be written to stdout/stderr."
+              },
+              "name": "",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "Can only exit with status 0-255. Other data should be written to stdout/stderr."
+              },
+              "helpUri": "https://github.com/koalaman/shellcheck/wiki/SC2242",
+              "shortDescription": {
+                "text": "Can only exit with status 0-255"
+              }
+            },
+            {
+              "id": "2068",
+              "help": {
+                "text": "Double quote array expansions to avoid re-splitting elements.",
+                "markdown": "Double quote array expansions to avoid re-splitting elements."
+              },
+              "name": "",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "Double quote array expansions to avoid re-splitting elements."
+              },
+              "helpUri": "https://github.com/koalaman/shellcheck/wiki/SC2068",
+              "shortDescription": {
+                "text": "Double quote array expansions to avoid re-splitting elements."
+              }
+            }
+          ],
+          "version": "1.0.0-scan",
+          "fullName": "Shell Script Analysis"
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "-a",
+            "--shell=bash",
+            "-f",
+            "json",
+            "-S",
+            "error",
+            "--color=never",
+            "/app/webwolf/start-webwolf.sh",
+            "/app/platformQuickStarts/GCP/GKE-Docker/gke-deploy-config.sh",
+            "/app/docker/start.sh",
+            "/app/scripts/build_docker.sh",
+            "/app/scripts/deploy-webgoat.sh",
+            "/app/scripts/build-all.sh",
+            "/app/scripts/start.sh",
+            "/app/scripts/clean-run-docker-compose.sh",
+            "/app/scripts/run-docker-compose.sh"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "-a --shell=bash -f json -S error --color=never /app/webwolf/start-webwolf.sh /app/platformQuickStarts/GCP/GKE-Docker/gke-deploy-config.sh /app/docker/start.sh /app/scripts/build_docker.sh /app/scripts/deploy-webgoat.sh /app/scripts/build-all.sh /app/scripts/start.sh /app/scripts/clean-run-docker-compose.sh /app/scripts/run-docker-compose.sh",
+          "endTimeUtc": "2020-12-24T11:15:15Z",
+          "workingDirectory": {
+            "uri": "file:///webgoat/WebGoat"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2020-12-24T11:15:15Z",
+          "workingDirectory": {
+            "uri": "file:///webgoat/WebGoat"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 4,
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 4
+        }
+      },
+      "results": [
+        {
+          "message": {
+            "markdown": "",
+            "text": "Don't put spaces around the = in assignments (or quote to make it literal)."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "  local started = $(netstat -lnt | grep ${DATABASE_PORT})\n"
+                  },
+                  "startLine": 8
+                },
+                "artifactLocation": {
+                  "uri": "file:///webgoat/WebGoat/scripts/start.sh"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "  #for i in $(seq 1 5); do command && s=0 && break || s=$? && sleep 15; done; (exit $s)\n  local started = $(netstat -lnt | grep ${DATABASE_PORT})\n"
+                  },
+                  "endLine": 8,
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "baselineState": "new",
+          "partialFingerprints": {},
+          "ruleId": "1068",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Can only exit with status 0-255. Other data should be written to stdout/stderr."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "  exit y$?\n"
+                  },
+                  "startLine": 18
+                },
+                "artifactLocation": {
+                  "uri": "file:///webgoat/WebGoat/scripts/build-all.sh"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if [[ \"$?\" -ne 0 ]] ; then\n  exit y$?\n"
+                  },
+                  "endLine": 18,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "baselineState": "new",
+          "partialFingerprints": {},
+          "ruleId": "2242",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Can only exit with status 0-255. Other data should be written to stdout/stderr."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "  exit y$?\n"
+                  },
+                  "startLine": 24
+                },
+                "artifactLocation": {
+                  "uri": "file:///webgoat/WebGoat/scripts/build-all.sh"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if [[ \"$?\" -ne 0 ]] ; then\n  exit y$?\n"
+                  },
+                  "endLine": 24,
+                  "startLine": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "baselineState": "new",
+          "partialFingerprints": {},
+          "ruleId": "2242",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Double quote array expansions to avoid re-splitting elements."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "sleep 8 && java -Djava.security.egd=file:/dev/./urandom -jar /home/webwolf/webwolf.jar $@\n"
+                  },
+                  "startLine": 7
+                },
+                "artifactLocation": {
+                  "uri": "file:///webgoat/WebGoat/webwolf/start-webwolf.sh"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "echo \" Waiting for database to be available...\"\nsleep 8 && java -Djava.security.egd=file:/dev/./urandom -jar /home/webwolf/webwolf.jar $@\n"
+                  },
+                  "endLine": 7,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "baselineState": "new",
+          "partialFingerprints": {},
+          "ruleId": "2068",
+          "ruleIndex": 2
+        }
+      ],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "afcc5937-7495-410e-8caf-8a0b50403a70"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "develop",
+          "repositoryUri": "https://github.com/WebGoat/WebGoat",
+          "revisionId": "60c7fdd0dbcbc09aaa22f5c772666c716344f8cf"
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "afcc5937-7495-410e-8caf-8a0b50403a70",
+      "runGuid": "e91e98b6-840b-41ae-94b9-65279efa5750"
+    }
+  ]
+}

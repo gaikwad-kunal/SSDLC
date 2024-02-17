@@ -1,0 +1,3 @@
+/app/goat-with-reverseproxy.yaml:1:1: [warning] missing document start "---" (document-start)
+/app/goat-with-reverseproxy.yaml:28:81: [error] line too long (101 > 80 characters) (line-length)
+/app/goat-with-reverseproxy.yaml:34:13: [error] wrong indentation: expected 6 but found 12 (indentation)
