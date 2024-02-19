@@ -71,25 +71,3 @@ SAST tools analyse source code to look for security issues in an application dur
 DAST tools run automated penetration testing scans against a running service as a blackbox. It tries to hack into the service using well known vulnerabilities, however scans can take a while due to the vast number, as well as crawling services to find all the endpoints.
 
 * [OWASP ZAP](https://github.com/zaproxy/zaproxy)
-
-## Security monitoring and infrastructure misconfigurations
-
-Continuously scan your AWS accounts for configuration errors using various security standards and roll up security check results at the account and multi-account level to understand your overall security state.
-
-AWS Security Hub collects and consolidates findings from AWS security services enabled in your environment, such as intrusion detection findings from Amazon GuardDuty, vulnerability scans from Amazon Inspector, and S3 bucket policy findings from Amazon Macie.
-
-* [AWS Security Hub](https://aws.amazon.com/security-hub/?aws-security-hub-blogs.sort-by=item.additionalFields.createdDate&aws-security-hub-blogs.sort-order=desc)
-
-## Vulnerability assessment tool
-
-The vulnerability assessment tool scans the underlying infrastructure, it runs tests against client computers using a database of known exploits and weaknesses. It looks for host, os level vulnerabilities. 
-
-* [OpenVas](https://github.com/greenbone/openvas-scanner)
-
-
-## Vulnerability management tool 
-
-Vulnerability management tool allows you to manage your application security program, maintain product and application information, triage vulnerabilities and push findings into defect trackers. Consolidate your findings
-
-* [DefectDojo](https://github.com/DefectDojo/django-DefectDojo)
-
