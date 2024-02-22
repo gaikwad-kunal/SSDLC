@@ -1,4 +1,4 @@
-# DevSecOps 
+# SSDLC (Secure Software Development Life Cycle) 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -17,9 +17,8 @@ Advantages of DevSecOps:
 
 ### Integrate Security checks into jenkins pipeline 
 
-To implement devsecops pipeline we are using java based vulnerable WebGoat application. We are injectiong following security checks into jenkins pipeline.
+To implement SSDLC pipeline we are using java based vulnerable WebGoat application. We are injectiong following security checks into jenkins pipeline.
 
-  * Pre-commit hooks
   * Secret Scanning
   * SCA (Source composition analysis)
   * SAST (Static Application Security Testing)
@@ -28,7 +27,7 @@ To implement devsecops pipeline we are using java based vulnerable WebGoat appli
   * Vulnerability assessment
   * Vulnerability management
 
-![start_caQtDM_7id.sh](https://github.com/Suyashk96/webGoat_java/blob/master/scripts/DevSecOps_case_study%20(1).jpg)
+![start_caQtDM_7id.sh](https://github.com/gaikwad-kunal/SSDLC/blob/main/DevSecOps_case_study.jpg)
 
 ## Secure Development Processes
 
