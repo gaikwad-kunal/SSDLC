@@ -23,9 +23,6 @@ To implement SSDLC pipeline we are using java based vulnerable WebGoat applicati
   * SCA (Source composition analysis)
   * SAST (Static Application Security Testing)
   * DAST (Dynamic Application Security Testing)
-  * Security monitoring and infrastructure misconfigurations
-  * Vulnerability assessment
-  * Vulnerability management
 
 ![start_caQtDM_7id.sh](https://raw.githubusercontent.com/gaikwad-kunal/SSDLC/main/SSDLC_Case_study.JPG)
 
