@@ -27,7 +27,7 @@ To implement SSDLC pipeline we are using java based vulnerable WebGoat applicati
   * Vulnerability assessment
   * Vulnerability management
 
-![start_caQtDM_7id.sh(https://raw.githubusercontent.com/gaikwad-kunal/SSDLC/main/SSDLC_Case_study.JPG)
+![start_caQtDM_7id.sh](https://raw.githubusercontent.com/gaikwad-kunal/SSDLC/main/SSDLC_Case_study.JPG)
 
 ## Secure Development Processes
 
