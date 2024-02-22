@@ -4,20 +4,20 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-DevOps is a combination of cultural philosophies, practices, and tools that combine software development with information technology operations. These combined practices enable companies to deliver new application features and improved services to customers at a higher velocity
+DevOps combines cultural philosophies, practices, and tools that combine software development with information technology operations. These combined practices enable companies to deliver new application features and improved services to customers at a higher velocity
 
 Security testing is often treated as an ‘after the process’ necessity. This leaves the ongoing operations defenseless to malicious attacks. 
-Application security testing is done after the software delivery. With this approach security defects are found at the last stage, and it's very expensie and time consuming process to eliminate those defects. In that case security as a part of process is the only only way to ensure safety. 
+Application security testing is done after the software delivery. With this approach security defects are found at the last stage, and it's a very expensive and time consuming process to eliminate those defects. In that case security as a part of the process is the only way to ensure safety. 
 
-### DevSecOps is the ideology to integrate security practices into the software devlopment life cycle, create security as code culture.
+### SSDLC is the ideology to integrate security practices into the software development life cycle and create security as a code culture.
 
-Advantages of DevSecOps:
+Advantages of SSDLC:
  * Early identification of vulnerabilities in code during development
  * Greater flexibility in managing sudden changes during the development lifecycle
 
-### Integrate Security checks into jenkins pipeline 
+### Integrate Security checks into the Jenkins pipeline 
 
-To implement SSDLC pipeline we are using java based vulnerable WebGoat application. We are injectiong following security checks into jenkins pipeline.
+To implement the SSDLC pipeline we are using java based vulnerable WebGoat application. We are injection the following security checks into Jenkins pipeline.
 
   * Secret Scanning
   * SCA (Source composition analysis)
@@ -52,7 +52,7 @@ Software Composition Analysis (SCA) tools find common open source libraries and 
 
 ## SAST (Static Application Security Testing)
 
-SAST tools analyse source code to look for security issues in an application during non-running state, and are supported by a large number of languages. They usually have quite a high false positive rate, due to the fact they cannot track data through an app, instead using a bit of guesswork to determine if flaws exist.
+SAST tools analyze source code to look for security issues in an application during a non-running state and are supported by a large number of languages. They usually have quite a high false positive rate, due to the fact they cannot track data through an app, instead using a bit of guesswork to determine if flaws exist.
 
 * [SonarQube](https://www.sonarqube.org/) 
 
