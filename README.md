@@ -24,7 +24,7 @@ To implement the SSDLC pipeline we are using java based vulnerable WebGoat appli
   * SAST (Static Application Security Testing)
   * DAST (Dynamic Application Security Testing)
 
-![start_caQtDM_7id.sh](https://raw.githubusercontent.com/gaikwad-kunal/SSDLC/main/SSDLC_Case_study.JPG)
+![case_study_image](https://raw.githubusercontent.com/gaikwad-kunal/SSDLC/main/SSDLC_Case_study.JPG)
 
 ## Secure Development Processes
 
