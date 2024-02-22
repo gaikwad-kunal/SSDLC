@@ -42,12 +42,6 @@ To implement devsecops pipeline we are using java based vulnerable WebGoat appli
 
 # Tools and Resources
 
-## Pre-commit or Pre-push hooks
-
-Prevents developer from commiting senstitive information such as SSH keys, API keys, passwords, AWS keys. It validates the outgoing changeset for things that look suspicious.
-
-* [Tailsman](https://github.com/thoughtworks/talisman)
-
 ## Secret Scanning
 
 Searches through git repositories for secrets, digging deep into commit history and branches. This is effective at finding secrets accidentally committed 
